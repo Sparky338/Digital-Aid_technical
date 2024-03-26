@@ -15,3 +15,9 @@ Along with your code + comments, we will appreciate clear instructions on how to
 Please provide your instructions in the README file so that the code can be executed locally on any machine.
 
 Remember, this exercise is not about checking boxes, but about allowing you the freedom to demonstrate your unique strengths and approach to problem-solving. We're excited to see what you can create!
+
+To start the app:
+
+```cd digital-aid-seattle```
+
+```npm start```
