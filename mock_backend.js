@@ -36,11 +36,10 @@ const donation = (donorName, donationType, qty) => {
   }
 
   if (!donors[donorName]) {
-    donors[donorName] = {
-        type: donationType,
-        quantity: qty
-    }
-  } else if (donors[donorName][donationType]) {
+    donors[donorName] = {};
+  };
+
+  if (donors[donorName][donationType]) {
     donors[donorName][donationType] += qty;
   } else {
     donors[donorName][donationType] = qty;
@@ -61,17 +60,10 @@ const donationDistribution = (donationType, qty) => {
     });
     return `${donationType} has been distributed ${qty} times.`
   } else if (inventory[donationType] < qty) {
-        return `There is not enough ${donationType} to ditrubute ${qty} times.
+        return `There is not enough ${donationType} to distrubute ${qty} times.
                 There is ${inventory[donationType]} available to distribute.`
   } else {
         return `There is no ${donationType} available for distrubution. Please
                 check the inventory for donations available to distribute.`
   }
 };
-
-donation("matt", "hugs", 5);
-donation("matt", "kisses", 1);
-console.log(inventory)
-console.log(donors)
-console.log(donations)
-console.log(distribution)
