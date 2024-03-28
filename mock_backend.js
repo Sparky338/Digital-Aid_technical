@@ -4,13 +4,13 @@ would be needed for a backend including storing an inventory, adding to the
 inventory, and ditributing the inventory. */
 
 // Stores the inventory
-const inventory = { donationType: qty };
+const inventory = { /*donationType: qty*/ };
 
 // Stores the Donor list
 const donors = {
-  donorName: {
+  /*donorName: {
     donationType: qty,
-  },
+  },*/
 };
 
 // Stores the donation list
@@ -35,7 +35,12 @@ const donation = (donorName, donationType, qty) => {
     inventory[donationType] = qty;
   }
 
-  if (donors[donorName][donationType]) {
+  if (!donors[donorName]) {
+    donors[donorName] = {
+        type: donationType,
+        quantity: qty
+    }
+  } else if (donors[donorName][donationType]) {
     donors[donorName][donationType] += qty;
   } else {
     donors[donorName][donationType] = qty;
@@ -63,3 +68,10 @@ const donationDistribution = (donationType, qty) => {
                 check the inventory for donations available to distribute.`
   }
 };
+
+donation("matt", "hugs", 5);
+donation("matt", "kisses", 1);
+console.log(inventory)
+console.log(donors)
+console.log(donations)
+console.log(distribution)
