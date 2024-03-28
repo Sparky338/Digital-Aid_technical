@@ -21,14 +21,20 @@ const distribution = {
 }
 
 const donation = (donorName, donationType, qty) => {
-    // Adds to a log of donors, adds the donation type and quantity to the inventory.
-    // date added on calling donation function
+    // Adds to a log of donors, adds the donation type and quantity to the inventory,
+    // adds to the donation list. Date added to donations on calling donation function.
     donations.push({
         name: donorName,
         type: donationType,
         quantity: qty,
         date: Date.now()
     })
+
+    if (inventory[donationType]){
+        inventory[donationType] += qty
+    } else {
+        inventory[donationType] = qty
+    }
 
     if (donors[donorName][donationType]) {
         donors[donorName][donationType] += qty;
