@@ -44,6 +44,8 @@ const donation = (donorName, donationType, qty) => {
   } else {
     donors[donorName][donationType] = qty;
   }
+
+  return `Thank you for donating ${qty} ${donationType}, ${donorName}!`
 };
 
 const donationDistribution = (donationType, qty) => {
