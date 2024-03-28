@@ -60,10 +60,8 @@ const donationDistribution = (donationType, qty) => {
     });
     return `${donationType} has been distributed ${qty} times.`
   } else if (inventory[donationType] < qty) {
-        return `There is not enough ${donationType} to distrubute ${qty} times.
-                There is ${inventory[donationType]} available to distribute.`
+        return `There is not enough ${donationType} to distrubute ${qty} times. There is ${inventory[donationType]} available to distribute.`
   } else {
-        return `There is no ${donationType} available for distrubution. Please
-                check the inventory for donations available to distribute.`
+        return `There is no ${donationType} available for distrubution. Please check the inventory for donations available to distribute.`
   }
 };
