@@ -6,10 +6,10 @@ const Donation = () => {
     const [name, setName] = useState("");
     const [donationType, setDonationType] = useState("");
     const [qty, setQty] = useState(0);
-    let [donationRes, setDonationRes] = useState("")
+    let [donationRes, setDonationRes] = useState("");
 
     const [validationErrors, setValidationErrors] = useState([]);
-    const [hasSubmitted, setHasSubmitted] = useState(false)
+    const [hasSubmitted, setHasSubmitted] = useState(false);
 
     useEffect(() => {
         const errors = [];
@@ -19,7 +19,7 @@ const Donation = () => {
         if (isNaN(qty) || qty <= 0) errors.push("Quantity must be a numerical value greater than 0");
 
         setValidationErrors(errors);
-    }, [donationType, qty])
+    }, [donationType, qty]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
