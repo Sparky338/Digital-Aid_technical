@@ -6,16 +6,16 @@ const Donation = () => {
     // Create a semi-permanent storage for Inventory, Donors, Donations, and
     // Distribution. Would normally be stored in a database.
     if (!localStorage.getItem('inventory')) {
-        localStorage.setItem('inventory', "{}");
+        localStorage.setItem('inventory', '{}');
     }
     if (!localStorage.getItem('donors')) {
         localStorage.setItem('donors', "{}");
     }
     if (!localStorage.getItem('donations')) {
-        localStorage.setItem('donations', "{}");
+        localStorage.setItem('donations', "[]");
     }
     if (!localStorage.getItem('distribution')) {
-        localStorage.setItem('distribution', "{}");
+        localStorage.setItem('distribution', "[]");
     }
 
     const [name, setName] = useState("");

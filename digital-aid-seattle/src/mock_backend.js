@@ -4,7 +4,7 @@ would be needed for a backend including storing an inventory, adding to the
 inventory, and distributing the inventory. */
 
 // Stores the inventory
-const inventory = { /*donationType: qty*/ };
+let inventory = localStorage.getItem('inventory');
 
 // Stores the Donor list
 const donors = {
@@ -29,11 +29,15 @@ export const donation = (donorName, donationType, qty) => {
     date: Date.now(),
   });
 
-  if (inventory[donationType]) {
-    inventory[donationType] += qty;
+  if (!inventory[donationType]) {
+    inventory = {};
+    inventory[donationType] = +qty;
+  } else if (inventory[donationType]) {
+    inventory[donationType] += +qty;
   } else {
-    inventory[donationType] = qty;
+    inventory[donationType] = +qty;
   }
+  localStorage.setItem('inventory', JSON.stringify(inventory))
 
   if (!donors[donorName]) {
     donors[donorName] = {};
