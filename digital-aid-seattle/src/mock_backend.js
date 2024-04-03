@@ -19,7 +19,7 @@ const donations = [];
 // Stores the distribution logs
 const distribution = [];
 
-const donation = (donorName, donationType, qty) => {
+export const donation = (donorName, donationType, qty) => {
   // Adds to a log of donors, adds the donation type and quantity to the inventory,
   // adds to the donation list. Date added to donations on calling donation function.
   donations.push({
@@ -48,7 +48,7 @@ const donation = (donorName, donationType, qty) => {
   return `Thank you for donating ${qty} ${donationType}, ${donorName}!`
 };
 
-const donationDistribution = (donationType, qty) => {
+export const donationDistribution = (donationType, qty) => {
   // If the donation type exists AND the quantity is valid/
   // would not drop below 0, reduces the quantity from inventory.
   // date added on calling donationDistibution function

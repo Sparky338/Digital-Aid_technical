@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {donation} from "../mock_backend"
 
 const Donation = () => {
 
@@ -7,6 +8,7 @@ const Donation = () => {
     const [qty, setQty] = useState(0);
 
     const [validationErrors, setValidationErrors] = useState([]);
+    const [hasSubmitted, setHasSubmitted] = useState(false)
 
     useEffect(() => {
         const errors = [];
@@ -17,6 +19,17 @@ const Donation = () => {
 
         setValidationErrors(errors);
     }, [donationType, qty])
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setHasSubmitted(true);
+
+        if (!name) setName("Anonymous");
+        if (validationErrors.length) return alert("Please correct the errors before subimitting.")
+
+        // If this was using a database, this would be async and await the response from the DB
+        donation(name, donationType, qty)
+    }
 
     return (
         <div className="mainDiv">
