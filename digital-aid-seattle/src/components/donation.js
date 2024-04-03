@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import {donation} from "../mock_backend"
 
 const Donation = () => {
+
+    // Create a semi-permanent storage for Inventory, Donors, Donations, and
+    // Distribution. Would normally be stored in a database.
     if (!localStorage.getItem('inventory')) {
         localStorage.setItem('inventory', "{}");
     }

@@ -3,6 +3,21 @@ import { donationDistribution } from "../mock_backend";
 
 const Distribution = () => {
 
+    // Create a semi-permanent storage for Inventory, Donors, Donations, and
+    // Distribution. Would normally be stored in a database.
+    if (!localStorage.getItem('inventory')) {
+        localStorage.setItem('inventory', "{}");
+    }
+    if (!localStorage.getItem('donors')) {
+        localStorage.setItem('donors', "{}");
+    }
+    if (!localStorage.getItem('donations')) {
+        localStorage.setItem('donations', "{}");
+    }
+    if (!localStorage.getItem('distribution')) {
+        localStorage.setItem('distribution', "{}");
+    }
+    
     const [distributionType, setDistributionType] = useState("");
     const [qty, setQty] = useState(0);
     let [distributionRes, setDistributionRes] = useState("");
