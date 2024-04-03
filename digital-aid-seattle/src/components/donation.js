@@ -2,6 +2,18 @@ import { useEffect, useState } from "react";
 import {donation} from "../mock_backend"
 
 const Donation = () => {
+    if (!localStorage.getItem('inventory')) {
+        localStorage.setItem('inventory', "{}");
+    }
+    if (!localStorage.getItem('donors')) {
+        localStorage.setItem('donors', "{}");
+    }
+    if (!localStorage.getItem('donations')) {
+        localStorage.setItem('donations', "{}");
+    }
+    if (!localStorage.getItem('distribution')) {
+        localStorage.setItem('distribution', "{}");
+    }
 
     const [name, setName] = useState("");
     const [donationType, setDonationType] = useState("");
