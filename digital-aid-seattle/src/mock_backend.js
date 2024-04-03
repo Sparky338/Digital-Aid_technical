@@ -7,6 +7,7 @@ inventory, and distributing the inventory. */
 let inventory = localStorage.getItem('inventory');
 
 // Stores the Donor list
+// let donors = localStorage.getItem('donors')
 const donors = {
   /*donorName: {
     donationType: qty,
@@ -30,7 +31,7 @@ export const donation = (donorName, donationType, qty) => {
   });
 
   if (!inventory[donationType]) {
-    inventory = {};
+    inventory = {...(inventory)}; 
     inventory[donationType] = +qty;
   } else if (inventory[donationType]) {
     inventory[donationType] += +qty;
