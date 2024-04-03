@@ -6,6 +6,7 @@ const Donation = () => {
     const [name, setName] = useState("");
     const [donationType, setDonationType] = useState("");
     const [qty, setQty] = useState(0);
+    let [donationRes, setDonationRes] = useState("")
 
     const [validationErrors, setValidationErrors] = useState([]);
     const [hasSubmitted, setHasSubmitted] = useState(false)
@@ -15,20 +16,27 @@ const Donation = () => {
 
         if (!donationType) errors.push("A donation type must be specified");
         if (!qty) errors.push("A quantity must be entered");
-        if (isNaN(qty)) errors.push("Quantity must be a numerical value greater than 0");
+        if (isNaN(qty) || qty <= 0) errors.push("Quantity must be a numerical value greater than 0");
 
         setValidationErrors(errors);
     }, [donationType, qty])
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setHasSubmitted(true);
+        setDonationRes("");
 
         if (!name) setName("Anonymous");
-        if (validationErrors.length) return alert("Please correct the errors before subimitting.")
 
-        // If this was using a database, this would be async and await the response from the DB
-        donation(name, donationType, qty)
+        setHasSubmitted(true);
+        if (validationErrors.length) return alert("Please correct the errors before submitting.")
+
+        // If this was using a database, this would dispatch to the database and return a response.
+        await setDonationRes(donation(name, donationType, qty));
+
+        setName("");
+        setDonationType("");
+        setQty(0);
+        setHasSubmitted(false)
     }
 
     return (
@@ -81,6 +89,9 @@ const Donation = () => {
                     </form>
                 </div>
                 <button className="button donation-button" onClick={handleSubmit}>Donate!</button>
+                <div className="donation-response">
+                    {donationRes}
+                </div>
             </div>
         </div>
     )
