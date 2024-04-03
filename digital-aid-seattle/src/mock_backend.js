@@ -30,8 +30,8 @@ export const donation = (donorName, donationType, qty) => {
     date: Date.now(),
   });
 
-  if (!inventory[donationType]) {
-    inventory = {...(inventory)}; 
+  if (!inventory) {
+    inventory = {...(inventory)};
     inventory[donationType] = +qty;
   } else if (inventory[donationType]) {
     inventory[donationType] += +qty;
