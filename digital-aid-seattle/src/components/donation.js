@@ -40,7 +40,7 @@ const Donation = () => {
         e.preventDefault();
         setDonationRes("");
 
-        if (!name) setName("Anonymous");
+        if (name.length === 0) setName("Anonymous");
 
         setHasSubmitted(true);
         if (validationErrors.length) return alert("Please correct the errors before submitting.")

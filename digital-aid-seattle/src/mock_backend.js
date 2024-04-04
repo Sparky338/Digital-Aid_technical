@@ -4,7 +4,7 @@ would be needed for a backend including storing an inventory, adding to the
 inventory, and distributing the inventory. */
 
 // Stores the inventory
-let inventory = localStorage.getItem('inventory');
+let inventory = JSON.parse(localStorage.getItem('inventory'));
 
 // Stores the Donor list
 // let donors = localStorage.getItem('donors')
