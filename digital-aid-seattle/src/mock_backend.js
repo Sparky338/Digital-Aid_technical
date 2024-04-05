@@ -15,7 +15,7 @@ let donors = JSON.parse(localStorage.getItem('donors'));
 // };
 
 // Stores the donation list
-const donations = [];
+let donations = JSON.parse(localStorage.getItem('donations'));
 
 // Stores the distribution logs
 const distribution = [];
@@ -23,12 +23,17 @@ const distribution = [];
 export const donation = (donorName, donationType, qty) => {
   // Adds to a log of donors, adds the donation type and quantity to the inventory,
   // adds to the donation list. Date added to donations on calling donation function.
+  if (!donations) {
+    donations = []
+  }
+
   donations.push({
     name: donorName,
     type: donationType,
-    quantity: qty,
+    quantity: +qty,
     date: Date.now(),
   });
+  localStorage.setItem('donations', JSON.stringify(donations));
 
   if (!inventory) {
     inventory = {...(inventory)};
