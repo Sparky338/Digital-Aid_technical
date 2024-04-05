@@ -18,7 +18,7 @@ let donors = JSON.parse(localStorage.getItem('donors'));
 let donations = JSON.parse(localStorage.getItem('donations'));
 
 // Stores the distribution logs
-const distribution = [];
+let distribution = [];
 
 export const donation = (donorName, donationType, qty) => {
   // Adds to a log of donors, adds the donation type and quantity to the inventory,
@@ -67,13 +67,20 @@ export const donationDistribution = (donationType, qty) => {
   // would not drop below 0, reduces the quantity from inventory.
   // date added on calling donationDistibution function
 
-  if (inventory[donationType] >= qty) {
-    inventory[donationType] -= qty;
+  if (!distribution) {
+    distribution = []
+  }
+
+  if (inventory[donationType] >= +qty) {
+    inventory[donationType] -= +qty;
     distribution.push({
         type: donationType,
-        quantity: qty,
+        quantity: +qty,
         date: Date().toString()
     });
+    localStorage.setItem('inventory', JSON.stringify(inventory))
+    localStorage.setItem('distribution', JSON.stringify(distribution))
+
     return `${donationType} has been distributed ${qty} times.`
   } else if (inventory[donationType] < qty) {
         return `There is not enough ${donationType} to distrubute ${qty} times. There is ${inventory[donationType]} available to distribute.`
