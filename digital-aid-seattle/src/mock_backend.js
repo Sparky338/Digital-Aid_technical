@@ -7,12 +7,12 @@ inventory, and distributing the inventory. */
 let inventory = JSON.parse(localStorage.getItem('inventory'));
 
 // Stores the Donor list
-// let donors = localStorage.getItem('donors')
-const donors = {
-  /*donorName: {
-    donationType: qty,
-  },*/
-};
+let donors = JSON.parse(localStorage.getItem('donors'));
+// const donors = {
+//   /*donorName: {
+//     donationType: qty,
+//   },*/
+// };
 
 // Stores the donation list
 const donations = [];
@@ -40,15 +40,19 @@ export const donation = (donorName, donationType, qty) => {
   }
   localStorage.setItem('inventory', JSON.stringify(inventory))
 
-  if (!donors[donorName]) {
-    donors[donorName] = {};
-  };
-
-  if (donors[donorName][donationType]) {
-    donors[donorName][donationType] += qty;
-  } else {
-    donors[donorName][donationType] = qty;
+  if (!donors) {
+    donors = {...(donors)};
   }
+
+  if (!donors[donorName]){
+    donors[donorName] = {...(donors[donorName])}
+    donors[donorName][donationType] = +qty;
+  } else if (donors[donorName][donationType]) {
+    donors[donorName][donationType] += +qty;
+  } else {
+    donors[donorName][donationType] = +qty;
+  }
+  localStorage.setItem('donors', JSON.stringify(donors))
 
   return `Thank you for donating ${qty} ${donationType}, ${donorName}!`
 };
