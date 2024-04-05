@@ -40,13 +40,11 @@ const Donation = () => {
         e.preventDefault();
         setDonationRes("");
 
-        if (name.length === 0) setName("Anonymous");
-
         setHasSubmitted(true);
         if (validationErrors.length) return alert("Please correct the errors before submitting.")
 
         // If this was using a database, this would dispatch to the database and return a response.
-        await setDonationRes(donation(name, donationType, qty));
+        await setDonationRes(donation(name ? name : "Anonymous", donationType.toLowerCase(), qty));
 
         setName("");
         setDonationType("");
