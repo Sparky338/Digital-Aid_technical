@@ -18,7 +18,7 @@ let donors = JSON.parse(localStorage.getItem('donors'));
 let donations = JSON.parse(localStorage.getItem('donations'));
 
 // Stores the distribution logs
-let distribution = [];
+let distribution = JSON.parse(localStorage.getItem('distribution'));
 
 export const donation = (donorName, donationType, qty) => {
   // Adds to a log of donors, adds the donation type and quantity to the inventory,
