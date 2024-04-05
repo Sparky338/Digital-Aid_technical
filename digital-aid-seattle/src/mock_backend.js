@@ -31,7 +31,7 @@ export const donation = (donorName, donationType, qty) => {
     name: donorName,
     type: donationType,
     quantity: +qty,
-    date: Date.now(),
+    date: Date().toString(),
   });
   localStorage.setItem('donations', JSON.stringify(donations));
 
@@ -72,7 +72,7 @@ export const donationDistribution = (donationType, qty) => {
     distribution.push({
         type: donationType,
         quantity: qty,
-        date: Date.now()
+        date: Date().toString()
     });
     return `${donationType} has been distributed ${qty} times.`
   } else if (inventory[donationType] < qty) {
