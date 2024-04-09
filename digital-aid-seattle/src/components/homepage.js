@@ -19,8 +19,8 @@ const Homepage = () => {
         <Link to="/inventory" className="link inventory-link">
             <div className="inventory">Inventory</div>
         </Link>
-        <Link to="/donators" className="link donators-link">
-            <div className="donators">Donators</div>
+        <Link to="/donors" className="link donators-link">
+            <div className="donors">Donors</div>
         </Link>
 
       </div>

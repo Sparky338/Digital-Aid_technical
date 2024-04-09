@@ -4,6 +4,7 @@ import Homepage from './components/homepage';
 import Donation from './components/donation';
 import Distribution from './components/distribution';
 import Inventory from './components/inventory';
+import Donors from './components/donors';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path = '/donation' element = {<Donation />} />
         <Route path = '/distribution' element = {<Distribution />} />
         <Route path = '/inventory' element = {<Inventory />} />
-        {/* <Route path = '/donators' element = {<Donators />} /> */}
+        <Route path = '/donors' element = {<Donors />} />
       </Routes>
     </BrowserRouter>
   );
