@@ -17,13 +17,13 @@ const Donors = () => {
                 {donors && Object.entries(donors).map((donor, i) => {
                     return (
                     <tr className="donor-name-object" key={i}>
-                        {donor && Object.entries(donor).map((item, i) => {
+                        <td className="donor-name">{donor[0]}</td>
+                        {donor && Object.entries(donor[1]).map((item, i) => {
                             return (
-                                <td className="donors-item-name">{item}</td>
-                                // <td className="donors-item-quantity">
-                                // {donor[item[0]]}
-                                // </td>
-
+                                <tr className="donor-item-object" key={i}>
+                                    <td className="donor-item-type">{item[0]}</td>
+                                    <td className="donor-item-qty">{item[1]}</td>
+                                </tr>
                             )
                         })}
                     </tr>
