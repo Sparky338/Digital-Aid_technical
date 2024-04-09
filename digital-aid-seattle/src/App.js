@@ -5,10 +5,12 @@ import Donation from './components/donation';
 import Distribution from './components/distribution';
 import Inventory from './components/inventory';
 import Donors from './components/donors';
+import NavBar from './components/navbar';
 
 function App() {
   return (
     <BrowserRouter>
+      <NavBar />
       <Routes>
         <Route path = '/' exact = {true} element = {<Homepage />} />
         <Route path = '/donation' element = {<Donation />} />
