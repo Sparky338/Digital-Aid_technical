@@ -15,8 +15,8 @@ const Inventory = () => {
                     {inventory && Object.entries(inventory).map((item, i) => {
                         return (
                             <tr className="inventory-item" key={i}>
-                                <td className="inventory-item-name">{item[i]}</td>
-                                <td className="inventory-item-quantity">{inventory[item[i]]}</td>
+                                <td className="inventory-item-name">{item[0]}</td>
+                                <td className="inventory-item-quantity">{inventory[item[0]]}</td>
                             </tr>
                         )
                     })}
