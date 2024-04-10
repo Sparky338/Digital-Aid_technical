@@ -7,7 +7,7 @@ const Homepage = () => {
       <h2 className="pageDescription">
         Here is the homepage of the shelter's inventory control page. Please use
         the links below or on the navigation bar to access the donation
-        registration, distribution, or reports.
+        registration, distribution, or inventory and donors reports.
       </h2>
       <div className="links-list">
         <Link to="/donation" className="link donation-link">
