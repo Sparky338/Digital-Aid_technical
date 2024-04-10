@@ -8,7 +8,7 @@ const Donors = () => {
                 <tbody className="table-body" border="0" cellSpacing="0">
                     <thead className="table-header">
                     <tr>
-                        <th className="donor-name">Donor Name</th>
+                        <th className="donor-name-header">Donor Name</th>
                         <th className="donor-donation-type">Donation Type</th>
                         <th className="donor-donation-qty">Quantity</th>
                     </tr>
