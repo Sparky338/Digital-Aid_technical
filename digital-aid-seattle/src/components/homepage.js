@@ -11,7 +11,7 @@ const Homepage = () => {
       </h2>
       <div className="links-list">
         <Link to="/donation" className="link donation-link">
-            <div className="donation">Donations</div>
+            <div className="donation">Donation</div>
         </Link>
         <Link to="/distribution" className="link distribution-link">
             <div className="distribution">Distribution</div>
