@@ -1,13 +1,13 @@
 body {
-  margin: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgb(255, 255, 255);
-  background-color: grey;
-
+  background-color: rgb(226, 137, 21);
 }
 
 .link,
@@ -15,7 +15,7 @@ body {
   text-decoration: none;
   font-size: larger;
   font-weight: 700;
-  color:rgb(3, 3, 100);
+  color:rgb(2, 2, 215);
 }
 
 .link:hover,
