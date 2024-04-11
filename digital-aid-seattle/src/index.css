@@ -10,14 +10,16 @@ body {
 
 }
 
-.link {
+.link,
+.nav-link {
   text-decoration: none;
   font-size: larger;
   font-weight: 700;
   color:rgb(3, 3, 100);
 }
 
-.link:hover {
+.link:hover,
+.nav-link:hover {
   color: aliceblue;
 }
 

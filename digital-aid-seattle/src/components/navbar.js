@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import shelterLogo from '../images/android-chrome-512x512.png'
+import "../css/navbar.css"
 
 const NavBar = () => {
   return (
