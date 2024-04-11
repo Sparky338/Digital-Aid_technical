@@ -1,3 +1,5 @@
+import "../css/inventory.css"
+
 const Inventory = () => {
   const inventory = JSON.parse(localStorage.getItem("inventory"));
 
@@ -9,6 +11,7 @@ const Inventory = () => {
           <thead className="table-header">
             <tr>
               <th className="inventory-donation-type">Donation Type</th>
+              <th className="spacer" width="20px">&nbsp;</th>
               <th className="inventory-donation-qty">Quantity</th>
             </tr>
           </thead>
