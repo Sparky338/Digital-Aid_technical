@@ -1,16 +1,20 @@
-import { NavLink } from "react-router-dom";
-import shelterLogo from '../images/android-chrome-512x512.png'
-import "../css/navbar.css"
+import { NavLink, Link } from "react-router-dom";
+import shelterLogo from "../images/android-chrome-512x512.png";
+import "../css/navbar.css";
 
 const NavBar = () => {
   return (
     <div className="main-nav-bar">
-      <div className="logo">
-      <NavLink className={"home-logo nav-link"} to="/" exact={true}>
-          <img className="shelter-logo" src={shelterLogo} alt="Shelter logo" />
-        </NavLink>
-      </div>
       <div className="links">
+        <div className="logo">
+          <Link className={"home-logo link"} to="/" exact={true}>
+            <img
+              className="shelter-logo"
+              src={shelterLogo}
+              alt="Shelter logo"
+            />
+          </Link>
+        </div>
         <NavLink className={"home-link nav-link"} to="/" exact={true}>
           Home
         </NavLink>
