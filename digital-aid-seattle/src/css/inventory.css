@@ -1,7 +1,18 @@
+.table-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.inventory-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 .inventory-item {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    border-bottom: 1px solid black;
+    justify-content: space-evenly;
+    border-bottom: 1px black solid;
 }
-
