@@ -11,7 +11,6 @@ const Inventory = () => {
           <thead className="table-header">
             <tr className="inventory-header">
               <th className="inventory-donation-type">Donation Type</th>
-              {/* <th className="spacer" width="20px">&nbsp;</th> */}
               <th className="inventory-donation-qty">Quantity</th>
             </tr>
           </thead>
