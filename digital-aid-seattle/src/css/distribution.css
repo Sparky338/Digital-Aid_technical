@@ -6,9 +6,12 @@
 .distribution-response {
     display: flex;
     justify-content: center;
+    max-width: 350px;
     color: blue;
     font-size: large;
     font-weight: 700;
     background-color: aliceblue;
     margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
 }
