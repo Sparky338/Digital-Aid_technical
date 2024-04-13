@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { donationDistribution } from "../mock_backend";
+import "../css/distribution.css"
 
 const Distribution = () => {
   // Create a semi-permanent storage for Inventory, Donors, Donations, and

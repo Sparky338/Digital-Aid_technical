@@ -1,0 +1,4 @@
+.distributions {
+    display: flex;
+    flex-direction: column;
+}
