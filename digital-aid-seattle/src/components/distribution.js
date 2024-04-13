@@ -12,10 +12,10 @@ const Distribution = () => {
     localStorage.setItem("donors", "{}");
   }
   if (!localStorage.getItem("donations")) {
-    localStorage.setItem("donations", "{}");
+    localStorage.setItem("donations", "[]");
   }
   if (!localStorage.getItem("distribution")) {
-    localStorage.setItem("distribution", "{}");
+    localStorage.setItem("distribution", "[]");
   }
 
   const [distributionType, setDistributionType] = useState("");
