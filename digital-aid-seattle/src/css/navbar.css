@@ -1,5 +1,4 @@
 .main-nav-bar {
-    border-bottom: 1px solid black;
     border: 1px red solid;
 }
 
@@ -11,9 +10,18 @@
     background-color: rgb(114, 114, 114);
 }
 
+.logo {
+    position: relative;
+    top: 2px;
+}
+
 .shelter-logo {
     max-height: 50px;
     max-width: 50px;
+}
+
+.nav-link {
+    padding: 5px;
 }
 
 .nav-link.active {
