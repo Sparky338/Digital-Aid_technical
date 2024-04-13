@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../css/homepage.css"
 
 const Homepage = () => {
   return (
@@ -11,16 +12,16 @@ const Homepage = () => {
       </h2>
       <div className="links-list">
         <Link to="/donation" className="link donation-link">
-            <div className="donation">Donation</div>
+            <div className="donation link">Donation</div>
         </Link>
         <Link to="/distribution" className="link distribution-link">
-            <div className="distribution">Distribution</div>
+            <div className="distribution link">Distribution</div>
         </Link>
         <Link to="/inventory" className="link inventory-link">
-            <div className="inventory">Inventory</div>
+            <div className="inventory link">Inventory</div>
         </Link>
         <Link to="/donors" className="link donators-link">
-            <div className="donors">Donors</div>
+            <div className="donors link">Donors</div>
         </Link>
 
       </div>
