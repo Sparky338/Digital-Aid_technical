@@ -54,7 +54,7 @@ const Distribution = () => {
 
   return (
     <div className="mainDiv">
-      <h1>Distributions</h1>
+      <h1>Distribution</h1>
       <div className="distributions">
         <div className="distribution-container form">
           <form className="distribution-form" onSubmit={handleSubmit}>
