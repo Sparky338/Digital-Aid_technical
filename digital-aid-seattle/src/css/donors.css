@@ -1,0 +1,20 @@
+.donors-display-table {
+    width: 500px;
+}
+
+tr.table-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+tr.donor-name-object {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+tr.donor-item-object {
+    display: flex;
+    flex-direction: row;
+}
