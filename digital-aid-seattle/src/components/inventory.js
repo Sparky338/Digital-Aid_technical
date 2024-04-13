@@ -1,4 +1,4 @@
-import "../css/inventory.css"
+import "../css/inventory.css";
 
 const Inventory = () => {
   const inventory = JSON.parse(localStorage.getItem("inventory"));
@@ -14,17 +14,19 @@ const Inventory = () => {
               <th className="inventory-donation-qty">Quantity</th>
             </tr>
           </thead>
-          {inventory &&
-            Object.entries(inventory).map((item, i) => {
-              return (
-                <tr className="inventory-item" key={i}>
-                  <td className="inventory-item-name">{item[0]}</td>
-                  <td className="inventory-item-quantity">
-                    {inventory[item[0]]}
-                  </td>
-                </tr>
-              );
-            })}
+          <div className="inventory-item-container">
+            {inventory &&
+              Object.entries(inventory).map((item, i) => {
+                return (
+                  <tr className="inventory-item" key={i}>
+                    <td className="inventory-item-name">{item[0]}</td>
+                    <td className="inventory-item-quantity">
+                      {inventory[item[0]]}
+                    </td>
+                  </tr>
+                );
+              })}
+          </div>
         </tbody>
       </div>
     </div>
