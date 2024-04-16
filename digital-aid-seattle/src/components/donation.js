@@ -42,12 +42,14 @@ const Donation = () => {
     setDonationRes("");
 
     setHasSubmitted(true);
-    if (validationErrors.length)
-      return alert("Please correct the errors before submitting.");
+    if (validationErrors.length) return alert("Please correct the errors before submitting.");
 
-    // If this was using a database, this would dispatch to the database and return a response.
+    /* If this was using a database, this would dispatch to the database and return a response.
+    If a name is given, it will use that name, otherwise it will use Anonymous. Trim removes
+    excess whitespace before and after name and donation type */
+
     await setDonationRes(
-      donation(name ? name : "Anonymous", donationType.toLowerCase(), qty)
+      donation(name ? name.trim() : "Anonymous", donationType.toLowerCase().trim(), qty)
     );
 
     setName("");
