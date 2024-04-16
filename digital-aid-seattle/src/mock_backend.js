@@ -81,7 +81,7 @@ export const donationDistribution = (donationType, qty) => {
     localStorage.setItem('inventory', JSON.stringify(inventory))
     localStorage.setItem('distribution', JSON.stringify(distribution))
 
-    return `${donationType} has been distributed ${qty} times.`
+    return `Thank you for distributing ${donationType} ${qty} times.`
   } else if (inventory[donationType] < qty) {
         return `There is not enough ${donationType} to distrubute ${qty} times. There is ${inventory[donationType]} available to distribute.`
   } else {
