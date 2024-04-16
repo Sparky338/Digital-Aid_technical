@@ -108,7 +108,7 @@ const Donation = () => {
           </form>
         </div>
         <button className="button donation-button" onClick={handleSubmit}>
-          Donate!
+          Add Donation
         </button>
         <div className="donation-response">{donationRes}</div>
       </div>

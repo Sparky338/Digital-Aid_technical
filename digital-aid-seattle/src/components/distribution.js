@@ -94,7 +94,7 @@ const Distribution = () => {
           </form>
         </div>
         <button className="button distribute-button" onClick={handleSubmit}>
-          Distribute!
+          Distribute Item
         </button>
         <div className="distribution-response">{distributionRes}</div>
       </div>
