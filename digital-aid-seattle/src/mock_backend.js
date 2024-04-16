@@ -8,11 +8,6 @@ let inventory = JSON.parse(localStorage.getItem('inventory'));
 
 // Stores the Donor list
 let donors = JSON.parse(localStorage.getItem('donors'));
-// const donors = {
-//   /*donorName: {
-//     donationType: qty,
-//   },*/
-// };
 
 // Stores the donation list
 let donations = JSON.parse(localStorage.getItem('donations'));
