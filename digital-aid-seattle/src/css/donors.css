@@ -1,5 +1,10 @@
 .donors-display-table {
     width: 500px;
+    background-color: aliceblue;
+    color: rgb(15, 15, 82);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 tr.table-header {

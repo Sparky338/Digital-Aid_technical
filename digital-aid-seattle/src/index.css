@@ -67,7 +67,7 @@ label {
 }
 
 button {
-  background-color: green;
+  background-color: rgb(25, 13, 181);
   font-size: large;
   color: aliceblue;
   border-radius: 5px;
@@ -76,7 +76,7 @@ button {
 .errors {
   color: red;
   width: 290px;
-  background-color: whitesmoke;
+  background-color: aliceblue;
   font-size: large;
   font-weight: 700;
   padding-right: 20px;
