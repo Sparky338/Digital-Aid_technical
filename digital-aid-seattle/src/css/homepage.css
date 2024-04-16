@@ -1,7 +1,16 @@
 .pageDescription {
-    width: 75%;
+    width: 60%;
 }
 
 .link {
     margin-bottom: 5px;
+}
+
+.links-list {
+    background-color: aliceblue;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
 }
