@@ -1,4 +1,14 @@
-# Digital-Aid_technical
+# Digital Aid Seattle Technical Coding Project
+
+## To start the app:
+
+In the terminal from the root of this project-
+
+```cd digital-aid-seattle```
+
+```npm start```
+
+## Coding project prompt:
 
 Imagine you're tasked with creating a practical solution for a local shelter to manage their donation inventory. This shelter is in need of a user-friendly tool to accurately record and track the inflow and outflow of donations, and to generate insightful reports about their donation management.
 
@@ -19,8 +29,6 @@ Please provide your instructions in the README file so that the code can be exec
 
 Remember, this exercise is not about checking boxes, but about allowing you the freedom to demonstrate your unique strengths and approach to problem-solving. We're excited to see what you can create!
 
-To start the app:
+## Screenshots
 
-```cd digital-aid-seattle```
 
-```npm start```
