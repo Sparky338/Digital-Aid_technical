@@ -41,11 +41,11 @@ const Distribution = () => {
     setDistributionRes("");
     setHasSubmitted(true);
 
-    if (validationErrors.length)
-      return alert("Please correct the errors before submitting.");
+    if (validationErrors.length) return alert("Please correct the errors before submitting.");
 
     // If this was using a database, this would dispatch to the database and return a response.
-    await setDistributionRes(donationDistribution(distributionType, qty));
+    // Distribution type will be sent in lower case with whitespace trimmed from the front and end.
+    await setDistributionRes(donationDistribution(distributionType.toLowerCase().trim(), qty));
 
     setDistributionType("");
     setQty(0);
