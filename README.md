@@ -31,4 +31,21 @@ Remember, this exercise is not about checking boxes, but about allowing you the 
 
 ## Screenshots
 
+Home page
+![Shelter-homepage](./digital-aid-seattle/src/images/Readme/Homepage.png)
 
+Donation Page
+![Shelter-donation-page](./digital-aid-seattle/src/images/Readme/donation.png)
+![Shelter-donation-page-with-errors](./digital-aid-seattle/src/images/Readme/donation_with_error.png)
+![Shelter-donation-page-success](./digital-aid-seattle/src/images/Readme/successful_donation.png)
+
+Distribution Page
+![Shelter-distribution-page](./digital-aid-seattle/src/images/Readme/distribution.png)
+![Shelter-distribution-page-with-error](./digital-aid-seattle/src/images/Readme/distribution_error.png)
+![Shelter-distribution-page-success](./digital-aid-seattle/src/images/Readme/successful_distribution.png)
+
+Inventory Page
+![Shelter-inventory-page](./digital-aid-seattle/src/images/Readme/Inventory.png)
+
+Donors Page
+![Shelter-donors-page](./digital-aid-seattle/src/images/Readme/Donors.png)
