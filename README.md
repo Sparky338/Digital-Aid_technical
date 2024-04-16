@@ -49,3 +49,13 @@ Inventory Page
 
 Donors Page
 ![Shelter-donors-page](./digital-aid-seattle/src/images/Readme/Donors.png)
+
+## Contact Information
+
+[GitHub](http://github.com/Sparky338)
+
+[LinkedIn](https://www.linkedin.com/in/matt-hutter-2a6620173)
+
+[Portfolio](https://sparky338.github.io/)
+
+[matthewjhutter@gmail.com](mailto:matthewjhutter@gmail.com)
