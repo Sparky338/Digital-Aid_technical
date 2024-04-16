@@ -16,6 +16,12 @@ const Homepage = () => {
         or distribution is. For example, a shirt would be clothing. Please use
         the singular form of a type even if multiple items are donated or distributed.
       </h2>
+      <h2 className="pageDescription">
+        The inventory page is a list of the current inventory. As items are distributed
+        or added, the inventory will adjust accordingly. The donors page is a list of
+        all current donors, with the total of all of the donations they have made for
+        each type of item.
+      </h2>
       <div className="links-list">
         <Link to="/donation" className="link donation-link">
             <div className="donation link">Donation</div>
