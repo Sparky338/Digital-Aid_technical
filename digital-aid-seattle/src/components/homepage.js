@@ -6,9 +6,15 @@ const Homepage = () => {
     <div className="mainDiv">
       <h1 className="title"> Best Shelter in the PNW! </h1>
       <h2 className="pageDescription">
-        Here is the homepage of the shelter's inventory control page. Please use
-        the links below or on the navigation bar to access the donation
-        registration, distribution, or inventory and donors reports.
+        Welcome to the homepage of the shelter's inventory control page. Please use
+        the links below or on the navigation bar above to access donation
+        registration, distribution, inventory, and donors list.
+      </h2>
+      <h2 className="pageDescription">
+        On the donation and distibution pages, there is a field called donation/
+        distribution type. This is where you will input what kind of item the donation
+        or distribution is. For example, a shirt would be clothing. Please use
+        the singular form of a type even if multiple items are donated or distributed.
       </h2>
       <div className="links-list">
         <Link to="/donation" className="link donation-link">
