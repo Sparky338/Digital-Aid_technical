@@ -5,6 +5,7 @@ import Distribution from './components/distribution';
 import Inventory from './components/inventory';
 import Donors from './components/donors';
 import NavBar from './components/navbar';
+import Page404 from './components/404';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path = '/distribution' element = {<Distribution />} />
         <Route path = '/inventory' element = {<Inventory />} />
         <Route path = '/donors' element = {<Donors />} />
+        <Route path = '*' element = {<Page404 />} />
       </Routes>
     </BrowserRouter>
   );
