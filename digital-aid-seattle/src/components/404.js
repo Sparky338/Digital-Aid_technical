@@ -9,9 +9,9 @@ const Page404 = () => {
         It looks like you've arrived on this page on accident! It must have been
         a pesky broken link or bad redirect. We will try to get it fixed as soon
         as possible, but please let your developer know so they can work on it!
-        In the meantime, please return to the
+        In the meantime, please return to the {` `}
         <Link to="/" className="link homepage-link">
-            {` Homepage`}
+            Homepage
         </Link>
         .
       </h2>

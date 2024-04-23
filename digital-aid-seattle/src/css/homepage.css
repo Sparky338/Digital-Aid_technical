@@ -11,3 +11,9 @@
     padding: 10px 20px;
     border-radius: 5px;
 }
+
+.homepage-link {
+    background-color: aliceblue;
+    padding-bottom: 2px;
+    padding-right: 1px;
+}
